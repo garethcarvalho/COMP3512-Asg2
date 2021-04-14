@@ -2,7 +2,7 @@
     session_start();
     require_once('./php/config.inc.php');
     // require_once('action.php');
-    if(isset($_SESSION[("is_user_logged_in")])){
+    if(isset($_SESSION["is_user_logged_in"])){
         header("location: index.php");
     }
 ?>
