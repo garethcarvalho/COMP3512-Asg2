@@ -1,0 +1,200 @@
+/* CSS for the favourites page */
+
+:root {
+    --grey: #d7dbdb;
+    --dark-grey: #a0a8aa;
+    --blue: rgb(95, 148, 216);
+    --dark-blue: rgb(88, 111, 212);
+    --nav-height: 80px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: var(--grey);
+    width: 100%;
+    height: var(--nav-height);
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+}
+
+header a {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 2.5em;
+}
+
+p {
+    margin: 3px 0px;
+}
+
+.container {
+    display: grid;
+}
+
+.container > div {
+    background-color: var(--grey);
+}
+
+.fav-card {
+    grid-template-columns: 1fr 2fr .5fr;
+    background: var(--grey);
+    margin: 10px 0px 10px 0px;
+    vertical-align: middle;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.fav-info * {
+    text-decoration: none;
+    color: black;
+}
+
+.fav-info *:hover {
+    color: rgb(90, 90, 90)
+}
+
+.fav-card h3 {
+    font-size: 1em;
+}
+
+.fav-card img {
+    max-width: 200px;
+    padding: 10px;
+    margin: auto;
+}
+
+#hamburger-button {
+    float: right;
+    background-color: var(--blue);
+    background-image: url(../img/images/hamburger-icon.png);
+    background-size: 40px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    /* background-color: var(--blue); */
+    padding: 40px;
+    margin: 0;
+}
+
+#hamburger-button:hover {
+    background-color: var(--dark-blue);
+}
+
+#hamburger-menu {
+    background-color: var(--blue);
+    right: 0px;
+    width: 20%;
+    list-style: none;
+
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    position: fixed;
+}
+
+#hamburger-menu li {
+    width: 100%;
+    padding: 20px 50px 20px 20px;
+}
+
+#hamburger-menu a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+#hamburger-menu li:hover {
+    background-color: var(--dark-blue);
+}
+
+#main {
+    margin-top: var(--nav-height);
+    padding: 10px;
+}
+
+.remove-button {
+    background-color: var(--blue);
+    padding: 60px 10px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.remove-button:hover {
+    background-color: var(--dark-blue);
+    color: white;
+}
+
+#remove-all-container {
+    margin: 50px 0px;
+    width: 40%;
+}
+
+#remove-all-button {
+    background-color: var(--blue);
+    text-align: center;
+    padding: 40px;
+    
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+
+    border-radius: 5px;
+}
+
+#remove-all-button:hover {
+    background-color: var(--dark-blue);
+    color: white;
+}
+
+
+#logo {
+    width: var(--nav-height);
+    margin-left: 50px;
+  }
+
+@media (max-width: 813px) {
+    :root {
+        --nav-height: 100px;
+    }
+
+    #hamburger-button {
+        background-size: 50px;
+        padding: 50px;
+    }
+
+    #hamburger-menu {
+        width: 45%;
+    }
+
+    .fav-card img {
+        max-width: 100px;
+    }
+
+    #remove-all-container {
+        margin: 50px 0px;
+        width: 80%;
+    }
+
+    .fav-card {
+        grid-template-columns: 1fr 1fr .5fr;
+    }
+
+    .fav-info {
+        margin-top: 30px;
+    }
+}

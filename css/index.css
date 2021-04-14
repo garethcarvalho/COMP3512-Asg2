@@ -1,0 +1,237 @@
+/* CSS for the index page */
+
+:root {
+    --grey: #d7dbdb;
+    --dark-grey: #a0a8aa;
+    --blue: rgb(95, 148, 216);
+    --dark-blue: rgb(88, 111, 212);
+    --nav-height: 80px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: var(--grey);
+    width: 100%;
+    height: var(--nav-height);
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+}
+
+#logo {
+    width: var(--nav-height);
+    margin-left: 50px;
+  }
+
+header a {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 2.5em;
+}
+
+p {
+    margin: 3px 0px;
+}
+
+.container {
+    display: grid;
+}
+
+.container > div {
+    background-color: var(--grey);
+}
+
+.button-label {
+    display: inline-block;
+    background-color: var(--blue);
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: black;
+
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.button-label:hover {
+    background-color:var(--dark-blue);
+    color: white;
+}
+
+.scrollable {
+    overflow-y: scroll;
+}
+
+.banner {
+    padding: 15px 50px;
+}
+
+.banner-button {
+   margin: 40px 80px;     
+}
+
+.large {
+    font-size: 1.5em;
+}
+
+.small {
+    font-size: 0.6em;
+}
+
+#main-container {
+    height: 88vh;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1.01fr;
+    grid-gap: 10px;
+    padding: 10px;
+    margin-top: var(--nav-height);
+}
+
+#welcome-banner {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    text-align: center;
+}
+
+#welcome-banner div {
+    margin: 300px 0px;
+
+}
+
+#companies-banner {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 10px;
+    padding: 60px 20px;
+}
+
+#companies-banner a {
+    background-image: url(../img/images/magnifying-glass-icon.png);
+    background-size: 70px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+#about-banner {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
+    padding: 60px 20px;
+
+    text-align: right;
+}
+
+#about-banner a {
+    background-image: url(../img/images/book-icon.png);
+    background-size: 70px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+#hamburger-button {
+    float: right;
+    background-color: var(--blue);
+    background-image: url(../img/images/hamburger-icon.png);
+    background-size: 40px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    /* background-color: var(--blue); */
+    padding: 40px;
+    margin: 0;
+}
+
+#hamburger-button:hover {
+    background-color: var(--dark-blue);
+}
+
+#hamburger-menu {
+    background-color: var(--blue);
+    right: 0px;
+    width: 20%;
+    list-style: none;
+
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    position: fixed;
+}
+
+
+#hamburger-menu a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+#hamburger-menu li {
+    width: 100%;
+    padding: 20px 50px 20px 20px;
+}
+
+#hamburger-menu li:hover {
+    background-color: var(--dark-blue);
+}
+
+
+.banner a {
+    font-size: 1.5em;
+}
+
+@media (max-width: 813px) {
+    :root {
+        --nav-height: 100px;
+    }
+
+    .banner-button {
+        margin: 0px;     
+     }
+
+    #hamburger-button {
+        background-size: 50px;
+        padding: 50px;
+    }
+
+    #hamburger-menu {
+        width: 45%;
+    }
+
+    #main-container {
+        height: 88vh;
+        grid-template-rows: 2fr 3fr 3fr;
+        grid-template-columns: 1fr;
+    }
+
+    #welcome-banner {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+    }
+
+    #companies-banner {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+    }
+
+    #about-banner {
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+    }
+
+    #welcome-banner div {
+        margin: 0;
+    }
+}
